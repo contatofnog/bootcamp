@@ -1,0 +1,16 @@
+name: npm install and test
+on:
+  push:
+    branches:
+      - master
+jobs:
+  testCode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: 'Install dependencies'
+        run:  npm install
+      - name: 'Run linter'
+        run:  npm test
+      - name: 'Run tests'
+        run:  ./node_modules/.bin/mocha --recursive Javascript/
