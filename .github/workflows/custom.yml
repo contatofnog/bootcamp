@@ -13,4 +13,4 @@ jobs:
       - name: 'Run linter'
         run:  npm test
       - name: 'Run tests'
-        run:  ./node_modules/.bin/mocha --recursive Javascript/
+        run:  ./node_modules/.bin/mocha --recursive JavaScript/
